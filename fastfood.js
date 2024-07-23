@@ -32,7 +32,7 @@ function comidaSeleccionada() {
     let agregarMas= true
     while (agregarMas){
         
-        seleccion2 = parseFloat(prompt('Estas son las opciones disponibles: \n Por favor selecciona una opcion \n1. Hamburguesa clasica con papas fritas      ... AR$ 8000 \n2. Hamburguesa especial con papas fritas      ... AR$ 12000 \n3. Pancho con papas fritas      ... AR$ 4000 \n4. Pizza Muzzarella      ... AR$ 10000 \n5. Pizza especial      ... AR$ 15000 '))
+        seleccion2 = parseFloat(prompt('Estas son las opciones disponibles: \n Por favor introduzca un numero para seleccionar la opcion: \n1. Hamburguesa clasica con papas fritas      ... AR$ 8000 \n2. Hamburguesa especial con papas fritas      ... AR$ 12000 \n3. Pancho con papas fritas      ... AR$ 4000 \n4. Pizza Muzzarella      ... AR$ 10000 \n5. Pizza especial      ... AR$ 15000 '))
         switch (seleccion2){
             case 1:
                 seleccionComida.push('Hamburguesa clasica con papas fritas')
