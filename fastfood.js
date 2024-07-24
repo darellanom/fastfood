@@ -6,7 +6,6 @@ let datosInorrectos =true
 let pedidoConfirmado = false
 let ingreso = false
 let agregarMas = true
-let modificarMas = true
 let TotalCostoComida = 0
 let costoComida =[]
 let seleccionComida = []
@@ -70,6 +69,7 @@ function comidaSeleccionada() {
 }
 
 function modificarPedido(){
+    let modificarMas = true
     //Esta funcion permite eliminar alguna de las opciones antes escogidas y modifica el costo
     while ((modificarMas) && (seleccionComida.length>1)) {
         let listaSeleccionado2 = ''
@@ -82,10 +82,10 @@ function modificarPedido(){
         costoComida.splice(seleccion2-1, 1)
         alert ('Tu pedido ha sido modificado, por favor revisalo en la opcion 3 del menu principal' )
         modificarMas = confirm("¿Deseas quitar algo más?")
-    }
-    if ((seleccionComida.length=1)){
-        alert('¡Para eliminar alguno por lo menos deberias haber escogido dos platos!')
-    }       
+        if ((seleccionComida.length<2)){
+            alert('¡Para eliminar alguno, por lo menos deberias haber escogido dos platos!')
+       } 
+    }      
 } 
 
 function mostrarSeleccion() {
